@@ -1,9 +1,9 @@
 const connection = require('./connection');
 
-const burgers = {
-  selectAll: () => {
+const orm = {
+  selectAll: (table) => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM burgers', (err, data) => {
+      connection.query('SELECT * FROM ?', [table], (err, data) => {
         if (err) {
           reject(err);
         }
@@ -11,9 +11,9 @@ const burgers = {
       }); 
     });
   },
-  insertOne: (burgerName) => {
+  insertOne: (table, values) => {
     return new Promise((resolve, reject) => {
-      connection.query('INSERT INTO burgers(burger_name, devoured) VALUES(??, false)', [burgerName], (err, data) => {
+      connection.query('INSERT INTO ?? VALUES ?', [table, values], (err, data) => {
         if (err) {
           reject(err);
         }
@@ -21,9 +21,9 @@ const burgers = {
       });
     });
   },
-  updateOne: (burgerId) => {
+  updateOne: (table, set, condition) => {
     return new Promise((resolve, reject) => {
-      connection.query('UPDATE burgers SET burgers.devoured = true WHERE burgers.id = ??', [burgerId], (err, data) => {
+      connection.query('UPDATE ?? SET ? WHERE ?', [table, set, condition], (err, data) => {
         if (err) {
           reject(err);
         }
@@ -33,4 +33,4 @@ const burgers = {
   }
 };
 
-module.exports = burgers;
+module.exports = orm;
