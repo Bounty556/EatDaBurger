@@ -4,7 +4,7 @@ const burger = require('../models/burger');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  // TODO: Send homepage
+  res.render('index');
 });
 
 // Get all burgers
