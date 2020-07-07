@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#available-burgers {
+  background-color: lightcoral;
+  
+  float: left;
+  
+  width: 225px;
+}
+
+#burger-form {
+  width: 500px;
+}
+
+#burger-lists {
+  width: 500px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#devoured-burgers {
+  background-color: lightcoral;
+  
+  float: right;
+
+  width: 225px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.centered-text {
+  text-align: center;
+}

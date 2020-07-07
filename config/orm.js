@@ -13,7 +13,7 @@ const orm = {
   },
   insertOne: (table, values) => {
     return new Promise((resolve, reject) => {
-      connection.query('INSERT INTO ?? VALUES ?', [table, values], (err, data) => {
+      connection.query('INSERT INTO ?? SET ?', [table, values], (err, data) => {
         if (err) {
           reject(err);
         }

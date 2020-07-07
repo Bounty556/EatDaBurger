@@ -19,18 +19,14 @@ router.get('/api/burgers', (req, res) => {
 // Add new burger
 router.post('/api/burgers', (req, res) => {
   burger.addBurger(req.body.burgerName).then(() => {
-    burger.getBurgers().then(data => {
-      res.json(data);
-    });
+    res.end();
   });
 });
 
 // Update burger
 router.put('/api/burgers/:id', (req, res) => {
   burger.eatBurger(req.params.id).then(() => {
-    burger.getBurgers().then(data => {
-      res.json(data);
-    });
+    res.end();
   });
 });
 
