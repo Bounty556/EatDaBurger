@@ -39,4 +39,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Questions
-Inquiries? Send them to: {your email} ![Github](https://avatars1.githubusercontent.com/u/12930451?v=4&s=32)
+Inquiries? Send them to: Jacobmayday@gmail.com ![Github](https://avatars1.githubusercontent.com/u/12930451?v=4&s=32)
